@@ -1,44 +1,47 @@
  
- let count = 0;
+ let count = 1;
  let maxtries = 10;
  let y = Math.floor(Math.random() * 100 + 1);
  console.log(y);
-
- 
  
  function guessnum()
   {  
-    let tries = (maxtries-1) - count; 
+    let tries = maxtries - count; 
     tryleft.innerHTML = (`${tries}`);
     
-    let x = document.getElementById("x");
-    if (count > maxtries) {console.log(tryleft.innerHTML = 'Попытки кончились');
-    return(x);
-    }
+   
+    if (count >= maxtries) 
+    {
+        tryleft.innerHTML = (`Ваши попытки закончились. Нажмите F5, чтобы сыграть снова.`);
     
+    }
+
+    let x = document.getElementById(xvar.value);
+    
+    if (x == y)
+    {    
+    result.innerHTML = (`Ваш вариант ${xvar} является загаданным числом. Поздравяем Вас!`);  
+    result.innerHTML = (` It took you ${count} attempts to guess the correct number`);
+   
+    }
+
     else if(x > y) 
 
     {    
     result.innerHTML = (`Вы не угадали. Попробуйте меньшее число`);
     count++;
     return;
-    
 
     }
 
     else if (x < y)
     {
-    result.innerHTML = (`Вы не угадали.`);
+    result.innerHTML = (`Вы не угадали.  Попробуйте большее число`);
     count++;  
     return;
 
     }
-    if (x == y)
-    {    
-    result.innerHTML = (`Ваш вариант ${guessField} является загаданным числом. Поздравяем Вас!`);  
-    result.innerHTML = (` It took you ${count} attempts to guess the correct number`);
-   
-    }
+    
 
 }
  
