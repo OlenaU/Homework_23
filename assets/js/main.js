@@ -1,47 +1,64 @@
  
- let count = 1;
- let maxtries = 10;
- let y = Math.floor(Math.random() * 100 + 1);
- console.log(y);
- 
- function guessnum()
-  {  
-    let tries = maxtries - count; 
-    tryleft.innerHTML = (`${tries}`);
+    let y = Math.floor(Math.random() * 100 + 1);
+    console.log(y);
+    let count = 1;
+    let maxtries = 10;
+
+
+    function guessnum()
+    {   
+        let x = document.getElementById('xvar').value;
+        console.log(x); 
+        let tries = maxtries - count;
+        console.log(tries);
+        tryleft.innerHTML = (`${tries}`);
     
-   
-    if (count >= maxtries) 
-    {
+          
+        if (tries <= 0 ) 
+        {
         tryleft.innerHTML = (`Ваши попытки закончились. Нажмите F5, чтобы сыграть снова.`);
+        console.log('все!');
+        return;
+        }
+       
+        else if (x == y)
+        {    
+        result.innerHTML = (`Ваш вариант ${x} является загаданным числом. Поздравяем Вас!`);  
+        result.innerHTML = (`Вы угадали его  за ${count} попыток. Нажмите F5, чтобы сыграть снова.`); 
+        return;
+        
+        }
     
-    }
+        else if(x > y) 
+    
+        {    
+        count++;
+        result.innerHTML = (`Вы не угадали. Попробуйте меньшее число`);
+        return;
+    
+        }
+    
+        else  (x < y)
+        {
+        count++; 
+        result.innerHTML = (`Вы не угадали. Попробуйте большее число`);
+    
+        }
+        
+    } 
+    
+    
+    
 
-    let x = document.getElementById(xvar.value);
     
-    if (x == y)
-    {    
-    result.innerHTML = (`Ваш вариант ${xvar} является загаданным числом. Поздравяем Вас!`);  
-    result.innerHTML = (` It took you ${count} attempts to guess the correct number`);
+     
+    
    
-    }
-
-    else if(x > y) 
-
-    {    
-    result.innerHTML = (`Вы не угадали. Попробуйте меньшее число`);
-    count++;
-    return;
-
-    }
-
-    else if (x < y)
-    {
-    result.innerHTML = (`Вы не угадали.  Попробуйте большее число`);
-    count++;  
-    return;
-
-    }
+   
+    
+    
+    
+   
     
 
-}
- 
+    
