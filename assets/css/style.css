@@ -1,0 +1,42 @@
+
+
+
+html, body {
+    font-size: 16px;
+    color: #3FBF5F;
+    margin: 0px auto;
+    background-color: #f8faf1 ;
+    background-image: url(../images/1.webp);
+    font-family: 'BalsamiqSans-Regular' !important;
+    height: 100%vw;
+}
+
+h1 {
+    color: #2C49AD;
+}
+
+.fa-play-circle {
+    color: #2C49AD;
+  }
+
+
+@font-face {
+    font-family: 'BalsamiqSans-Regular';
+    src: url(../fonts/BalsamiqSans-Regular.ttf);
+    font-display: swap;
+    font-style: normal;
+    font-weight: 300;
+  }
+
+  .container {
+    width: 600px;
+    margin: 50px auto 30px;
+    border-radius: 34px;
+    box-shadow: 0px 0px 34px grey;
+    text-align: center;
+    background-color:#EFEFEF;
+  }
+
+  #tryleft {
+      font-size: 24px;
+  }
