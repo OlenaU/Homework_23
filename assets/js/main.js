@@ -20,14 +20,14 @@
           
         if (tries <= 0 ) 
         {
-        tryleft.innerHTML = (`Ваши попытки закончились. Нажмите F5, чтобы сыграть снова.`);
+        tryleft.innerHTML = (`Ваши попытки закончились. К сожалению, вы не угадали число <br> <span style="color: #3FBF5F; font-size: 28px;"> ${y} <br> <span style="color: #67014A; font-size: 16px;">  Нажмите F5, чтобы сыграть снова.`);
+        tryleft.style.color = '#67014A';
         return;
         }
        
         else if (x == y)
         {    
-        result.innerHTML = (`Ваш вариант ${x} является загаданным числом. Поздравяем Вас!`);  
-        result.innerHTML = (`Вы угадали число ${y}  за ${count} раз \\ раза. Нажмите F5, чтобы сыграть снова.`); 
+        result.innerHTML = (`Поздравляем! Вы угадали число за ${count} раз \\ раза. Нажмите F5, чтобы сыграть снова.`); 
         result.style.color = '#2C49AD'; 
         return;
         
