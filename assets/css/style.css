@@ -25,6 +25,10 @@ input {
   outline:none;
   border-radius: 5px;
 }
+.btn:hover, .btn:active, .btn:focus  { 
+  color: #67014A;
+}
+
 
 @font-face {
     font-family: 'BalsamiqSans-Regular';
