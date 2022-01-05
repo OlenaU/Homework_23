@@ -22,7 +22,7 @@ h1 {
 
 input {
   color: #2C49AD;
-  border-color: white;
+  outline:none;
   border-radius: 5px;
 }
 
